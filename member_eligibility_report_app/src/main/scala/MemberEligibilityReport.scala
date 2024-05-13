@@ -55,7 +55,7 @@ object MemberEligibilityReport {
     totalMemberMonthsDF.show(10)
 
     // Write output partitioned by MemberID in "output/task1" path
-  //  totalMemberMonthsDF.write.partitionBy("member_id").json("output/task1")
+  totalMemberMonthsDF.write.partitionBy("member_id").json("output/task1")
 
     // Task 2: Calculate total number of member months per member per year
     val memberMonthsPerYearDF = memberMonthsDF
